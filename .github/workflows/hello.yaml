@@ -12,4 +12,5 @@ jobs:
           - name: "Show structure"
             run: tree ./
           - run: echo "It works"
+          - run: mkdir /foo/moo/boo/zoo
             
