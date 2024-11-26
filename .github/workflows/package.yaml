@@ -11,6 +11,6 @@ jobs:
           java-version: '17'
           distribution: 'corretto'
       - name: "Run maven test"
-        run: mvn -Dskiptests package
+        run: mvn -DskipTests package
       - run: ls -la target/
     
