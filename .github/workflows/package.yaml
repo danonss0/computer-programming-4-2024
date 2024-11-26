@@ -17,7 +17,8 @@ jobs:
           distribution: 'corretto'
       - name: "Run maven test"
         run: mvn -DskipTests package
-      - run: ls -la target/*.jar target/app.jar
+      - run: ls -la target/
+      - run: mv target/*.jar target/app.jar
       - uses: ncipollo/release-action@v1
         with:
           artifacts: "target/app.jar"
