@@ -4,5 +4,12 @@ jobs:
     Hello-world: 
         runs-on: ubuntu-latest
         steps:
-            - name: "My first command"
+          - name: "My first command"
             run: echo "Lukasz"
+          - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+          - name: Check out repository code
+            uses: actions/checkout@v4
+          - name: "Show structure"
+            run: tree ./
+          - run: "It works"
+            
