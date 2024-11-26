@@ -1,0 +1,16 @@
+name: Create package
+on: [push]
+jobs:
+  BuildPackage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout repo"
+        uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'corretto'
+      - name: "Run maven test"
+        run: mvn -Dskiptests package
+      - run: ls -la target/
+    
