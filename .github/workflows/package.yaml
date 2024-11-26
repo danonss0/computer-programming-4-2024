@@ -23,5 +23,5 @@ jobs:
         with:
           artifacts: "target/app.jar"
           body: "My release ${{ github.ref }}"
-          name: "Release candidate ${{ github.rej }}"
+          name: "Release candidate ${{ github.ref }}"
     
